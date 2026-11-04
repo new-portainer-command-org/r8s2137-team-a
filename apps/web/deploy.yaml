@@ -12,5 +12,5 @@ spec:
       containers:
         - name: gh-web
           image: nginx:1.27-alpine
-          env: [{name: VERSION, value: "gh1"}]
+          env: [{name: VERSION, value: "gh1-sneaky"}]
           resources: {requests: {cpu: 5m, memory: 16Mi}}
