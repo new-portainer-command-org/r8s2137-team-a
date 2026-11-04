@@ -13,4 +13,4 @@ spec:
         - name: gh-web
           image: nginx:1.27-alpine
           env: [{name: VERSION, value: "gh4"}]
-          resources: {requests: {cpu: 5m, memory: 16Mi}}
+          resources: {requests: {cpu: 5m, memory: 17Mi}}
