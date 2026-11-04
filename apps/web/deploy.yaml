@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gh-web
+  labels: {app: gh-web}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: gh-web}}
+  template:
+    metadata: {labels: {app: gh-web}}
+    spec:
+      containers:
+        - name: gh-web
+          image: nginx:1.27-alpine
+          env: [{name: VERSION, value: "v1"}]
+          resources: {requests: {cpu: 5m, memory: 16Mi}}
